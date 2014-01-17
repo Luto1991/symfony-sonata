@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Sonata\UserBundle\Security\User\Provider;
+namespace Application\UserBundle\Security\User\Provider;
 
 use FOS\UserBundle\Model\UserManagerInterface;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;

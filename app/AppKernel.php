@@ -16,32 +16,26 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new JMS\AopBundle\JMSAopBundle(),
-            new JMS\DiExtraBundle\JMSDiExtraBundle($this),
-            new JMS\SecurityExtraBundle\JMSSecurityExtraBundle(),
-            // sonata
-            new Sonata\BlockBundle\SonataBlockBundle(),
-            //new Sonata\CacheBundle\SonataCacheBundle(),
-            new Sonata\jQueryBundle\SonatajQueryBundle(),
-            new Sonata\AdminBundle\SonataAdminBundle(),
-            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
-            new Sonata\IntlBundle\SonataIntlBundle(),
-            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
-            //new Application\Sonata\MediaBundle\ApplicationSonataMediaBundle(),
-            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+
             new FOS\UserBundle\FOSUserBundle(),
-            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-            new A2lix\TranslationFormBundle\A2lixTranslationFormBundle(),
-            new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
-            new Presta\SitemapBundle\PrestaSitemapBundle(),
-            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
-            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
-            new Trsteel\CkeditorBundle\TrsteelCkeditorBundle(),
-            new Yit\AdsBundle\YitAdsBundle(),
-            new SunCat\MobileDetectBundle\MobileDetectBundle(),
-            new Sonata\CoreBundle\SonataCoreBundle(),
-            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+
+            // Add your dependencies
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Sonata\jQueryBundle\SonatajQueryBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            //...
+            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
+
+            // If you haven't already, add the storage bundle
+            // This example uses SonataDoctrineORMAdmin but
+            // it works the same with the alternatives
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+
+
+            // Then add SonataAdminBundle
+            new Sonata\AdminBundle\SonataAdminBundle(),
+            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
+            new Application\UserBundle\ApplicationUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

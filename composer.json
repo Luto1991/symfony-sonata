@@ -19,35 +19,10 @@
         "sensio/framework-extra-bundle": "2.3.*",
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
-
-        "jms/security-extra-bundle": "1.5.*",
-        "jms/di-extra-bundle": "1.4.*",
-
-        "friendsofsymfony/user-bundle": "1.3.*",
-
-        "sonata-project/admin-bundle": "2.2.*@dev",
-        "sonata-project/block-bundle": "2.2.*",
-        "sonata-project/doctrine-orm-admin-bundle": "2.2.*@dev",
-        "sonata-project/intl-bundle": "2.1.*",
-        "sonata-project/user-bundle": "2.2.*",
-        "sonata-project/media-bundle" : "2.2.*@dev",
-
-
-        "sonata-project/easy-extends-bundle": "2.1.*",
-
-        "a2lix/translation-form-bundle": "1.*",
-        "stfalcon/tinymce-bundle": "0.3.*",
-        "genemu/form-bundle": "2.2.*",
-        "knplabs/knp-paginator-bundle": "2.3.*",
-        "stof/doctrine-extensions-bundle": "1.1.*",
-        "presta/sitemap-bundle": "1.2.*",
-        "doctrine/doctrine-migrations-bundle": "dev-master",
-        "doctrine/migrations": "dev-master",
-        "Trsteel/ckeditor-bundle": "1.2.*",
-        "mobiledetect/mobiledetectlib": "dev-master",
-        "suncat/mobile-detect-bundle": "dev-master",
-        "sonata-project/core-bundle": "~2.2@dev",
-        "yit/ads-bundle": "dev-master"
+        "sonata-project/admin-bundle": "2.2.8",
+        "sonata-project/doctrine-orm-admin-bundle": "2.2.*",
+        "sonata-project/user-bundle": "2.2.0",
+        "yit/map-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

@@ -4,7 +4,7 @@ imports:
 
 framework:
     #esi:             ~
-    #translator:      { fallback: "%locale%" }
+    translator:      { fallback: "%locale%" }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -52,7 +52,8 @@ doctrine:
         # if using pdo_sqlite as your database driver, add the path in parameters.yml
         # e.g. database_path: "%kernel.root_dir%/data/data.db3"
         # path:     "%database_path%"
-
+        types:
+          json: Sonata\Doctrine\Types\JsonType
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
@@ -111,9 +112,9 @@ sonata_admin:
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb'
     firewall_name: public
-    user_class: Application\Sonata\UserBundle\Entity\User
+    user_class: Application\UserBundle\Entity\User
     group:
-        group_class:  Application\Sonata\UserBundle\Entity\Group
+        group_class:  Application\UserBundle\Entity\Group
     profile:
         form:
             type:               fos_user_profile
@@ -140,12 +141,5 @@ sonata_user:
     security_acl:     false
     impersonating_route:    sonata_admin_dashboard
     class:
-        user:         Application\Sonata\UserBundle\Entity\User
-        group:        Application\Sonata\UserBundle\Entity\Group
-
-
-mobile_detect:
-    redirect:
-        mobile: ~
-        tablet: ~
-    switch_device_view: ~
+        user:         Application\UserBundle\Entity\User
+        group:        Application\UserBundle\Entity\Group
